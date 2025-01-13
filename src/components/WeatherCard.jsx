@@ -7,13 +7,14 @@ const [loading , setLoading]=useState(true)
 const[error , setError]= useState(false)
 
 const fetchWeather = async ()=>{
-try {    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=1519ea44e238413aa9481023242711&q=I&aqi=no
+try {    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=1519ea44e238413aa9481023242711&q=Indore&aqi=no
     `)
         const data  = await response.json()
         setWeather(data)
     
 } catch (error) {
     setError(true)
+    // console.log(error)
 }
 
 finally{
